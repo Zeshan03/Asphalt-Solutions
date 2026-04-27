@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asphalt Solutions LLC | Paving and Sealcoating in Central Maryland</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+
+  :root {
+    --bg: #f6f0e6;
+    --surface: #fffaf2;
+    --surface-strong: #f0e4d2;
+    --ink: #1f2327;
+    --muted: #5a636b;
+    --line: #d9c7af;
+    --accent: #b8742b;
+    --accent-dark: #8f571d;
+    --asphalt: #2d3135;
+    --asphalt-soft: #454c53;
+    --success: #2f6b3d;
+    --shadow: 0 18px 45px rgba(31, 35, 39, 0.10);
+    --radius: 22px;
+    --max: 1180px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    font-family: "Barlow", Arial, sans-serif;
+    color: var(--ink);
+    background:
+      radial-gradient(circle at top left, rgba(184, 116, 43, 0.10), transparent 32%),
+      linear-gradient(180deg, #fbf7f0 0%, var(--bg) 100%);
+  }
+
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+
+  .site-shell {
+    width: min(calc(100% - 2rem), var(--max));
+    margin: 0 auto;
+  }
+
+  .topbar {
+    background: var(--asphalt);
+    color: #f5efe6;
+    font-size: 0.95rem;
+  }
+
+  .topbar-inner {
+    width: min(calc(100% - 2rem), var(--max));
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.85rem 0;
+    flex-wrap: wrap;
+  }
+
+  .topbar a {
+    color: #f5efe6;
+    text-decoration: none;
+  }
+
+  .topbar a:hover { color: #ffffff; }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(246, 240, 230, 0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(31, 35, 39, 0.08);
+  }
+
+  .nav {
+    width: min(calc(100% - 2rem), var(--max));
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+
+  .brand {
+    text-decoration: none;
+    color: var(--ink);
+  }
+
+  .brand-mark {
+    display: block;
+    font-family: "Libre Baskerville", serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .brand-sub {
+    display: block;
+    margin-top: 0.15rem;
+    color: var(--muted);
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--muted);
+  }
+
+  .nav-links a:hover { color: var(--ink); }
+
+  .nav-button,
+  .button,
+  .button-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.95rem 1.35rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  }
+
+  .nav-button,
+  .button {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 12px 26px rgba(184, 116, 43, 0.25);
+  }
+
+  .nav-button:hover,
+  .button:hover {
+    background: var(--accent-dark);
+    transform: translateY(-1px);
+  }
+
+  .button-secondary {
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--ink);
+  }
+
+  .button-secondary:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: translateY(-1px);
+  }
+
+  .hero {
+    padding: 4.75rem 0 4rem;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 2rem;
+    align-items: stretch;
+  }
+
+  .hero-copy,
+  .hero-panel {
+    border-radius: calc(var(--radius) + 6px);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  .hero-copy {
+    background:
+      linear-gradient(135deg, rgba(45, 49, 53, 0.96), rgba(63, 69, 75, 0.92)),
+      var(--asphalt);
+    color: #f7f3ec;
+    padding: 3.3rem;
+    position: relative;
+  }
+
+  .hero-copy::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0 auto;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(255,255,255,0.10), transparent 65%);
+    pointer-events: none;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    color: #e7c9a4;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.82rem;
+    font-weight: 700;
+  }
+
+  .eyebrow::before {
+    content: "";
+    width: 2.5rem;
+    height: 1px;
+    background: currentColor;
+  }
+
+  h1, h2, h3 {
+    margin: 0;
+    font-family: "Libre Baskerville", serif;
+    line-height: 1.1;
+  }
+
+  h1 {
+    font-size: clamp(2.75rem, 5vw, 4.7rem);
+    max-width: 11ch;
+  }
+
+  .hero-copy p {
+    margin: 1.35rem 0 0;
+    max-width: 34rem;
+    color: rgba(247, 243, 236, 0.84);
+    font-size: 1.08rem;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: 2rem;
+  }
+
+  .trust-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 2.2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+  }
+
+  .trust-card strong {
+    display: block;
+    font-size: 1.8rem;
+    color: #fff;
+  }
+
+  .trust-card span {
+    color: rgba(247, 243, 236, 0.7);
+    font-size: 0.92rem;
+  }
+
+  .hero-panel {
+    background: var(--surface);
+    border: 1px solid rgba(31, 35, 39, 0.07);
+  }
+
+  .hero-panel img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+  }
+
+  .hero-panel-copy {
+    padding: 1.7rem 1.8rem 1.9rem;
+  }
+
+  .hero-panel-copy h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-panel-copy p {
+    margin: 0.9rem 0 0;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .mini-list {
+    margin: 1.2rem 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.8rem;
+  }
+
+  .mini-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    color: var(--ink);
+  }
+
+  .mini-list li::before {
+    content: "";
+    width: 0.65rem;
+    height: 0.65rem;
+    margin-top: 0.45rem;
+    border-radius: 999px;
+    background: var(--accent);
+    flex: 0 0 auto;
+  }
+
+  section {
+    padding: 2.25rem 0 0;
+  }
+
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-head p,
+  .lead,
+  .copy p,
+  .process-card p,
+  .service-card p,
+  .review-card p,
+  .contact-card p,
+  .contact-list li,
+  .footer-copy p {
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .section-kicker {
+    color: var(--accent-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 0.65rem;
+  }
+
+  .about-grid,
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .panel {
+    background: var(--surface);
+    border: 1px solid rgba(31, 35, 39, 0.08);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+
+  .copy,
+  .contact-card {
+    padding: 2rem;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .feature-item {
+    background: rgba(184, 116, 43, 0.08);
+    border: 1px solid rgba(184, 116, 43, 0.12);
+    border-radius: 18px;
+    padding: 1rem;
+  }
+
+  .feature-item strong {
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+
+  .feature-item span {
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .services-grid,
+  .process-grid,
+  .reviews-grid {
+    display: grid;
+    gap: 1.2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .reviews-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .service-card,
+  .process-card,
+  .review-card {
+    background: var(--surface);
+    border: 1px solid rgba(31, 35, 39, 0.08);
+    border-radius: var(--radius);
+    padding: 1.7rem;
+    box-shadow: var(--shadow);
+  }
+
+  .service-card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 6px;
+    background: linear-gradient(180deg, var(--accent), #d8b07a);
+  }
+
+  .service-label,
+  .process-step {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.1rem;
+    height: 2.1rem;
+    border-radius: 999px;
+    background: rgba(184, 116, 43, 0.12);
+    color: var(--accent-dark);
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .service-card h3,
+  .review-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .process-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 0.8fr;
+    gap: 1rem;
+  }
+
+  .gallery figure {
+    margin: 0;
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    min-height: 240px;
+    box-shadow: var(--shadow);
+  }
+
+  .gallery .large {
+    grid-row: span 2;
+    min-height: 100%;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gallery figcaption {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    background: rgba(31, 35, 39, 0.78);
+    color: #fff;
+    padding: 0.55rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.88rem;
+  }
+
+  .reviews-grid .review-card {
+    background: linear-gradient(180deg, #fffaf2, #f9f1e4);
+  }
+
+  .stars {
+    color: var(--accent);
+    letter-spacing: 0.14em;
+    font-size: 0.92rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .reviewer {
+    margin-top: 1rem;
+    font-weight: 700;
+  }
+
+  .reviewer span {
+    display: block;
+    margin-top: 0.25rem;
+    color: var(--muted);
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+
+  .contact-card {
+    background: linear-gradient(180deg, #fffaf2, #f3e6d4);
+  }
+
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.3rem 0 0;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .contact-list li strong {
+    display: block;
+    margin-bottom: 0.2rem;
+    color: var(--ink);
+  }
+
+  .contact-form {
+    padding: 2rem;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .field.full { grid-column: 1 / -1; }
+
+  label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    border: 1px solid #ccb59a;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.82);
+    padding: 0.9rem 1rem;
+    font: inherit;
+    color: var(--ink);
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: 2px solid rgba(184, 116, 43, 0.18);
+    border-color: var(--accent);
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 140px;
+  }
+
+  .form-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.2rem;
+  }
+
+  .form-note {
+    margin-top: 1rem;
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+
+  .success-message {
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem 1.1rem;
+    border-radius: 16px;
+    background: rgba(47, 107, 61, 0.10);
+    color: var(--success);
+    font-weight: 600;
+  }
+
+  footer {
+    margin-top: 4rem;
+    padding: 2.75rem 0 3rem;
+    border-top: 1px solid rgba(31, 35, 39, 0.10);
+  }
+
+  .footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: end;
+  }
+
+  .footer-copy h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    text-decoration: none;
+    color: var(--muted);
+    font-weight: 600;
+  }
+
+  .footer-links a:hover { color: var(--ink); }
+
+  @media (max-width: 1024px) {
+    .hero-grid,
+    .about-grid,
+    .contact-grid,
+    .process-grid,
+    .reviews-grid,
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .gallery .large {
+      grid-row: auto;
+      min-height: 320px;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .nav-links {
+      width: 100%;
+      justify-content: flex-start;
+    }
+
+    .hero,
+    section,
+    footer {
+      padding-top: 2rem;
+    }
+
+    .hero-copy,
+    .hero-panel-copy,
+    .copy,
+    .contact-card,
+    .contact-form,
+    .service-card,
+    .process-card,
+    .review-card {
+      padding: 1.35rem;
+    }
+
+    .hero-copy {
+      padding-top: 2rem;
+    }
+
+    .trust-row,
+    .feature-grid,
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .topbar-inner,
+    .section-head,
+    .footer-wrap {
+      align-items: flex-start;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <span>Serving Millersville, Annapolis, Glen Burnie, and surrounding Central Maryland communities</span>
+      <a href="mailto:johnkristieb@gmail.com">johnkristieb@gmail.com</a>
+    </div>
+  </div>
+
+  <header>
+    <nav class="nav">
+      <a href="#top" class="brand">
+        <span class="brand-mark">Asphalt Solutions LLC</span>
+        <span class="brand-sub">Paving. Sealcoating. Repair.</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#work">Our Work</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact" class="nav-button">Request an Estimate</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="site-shell hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Trusted Since 2004</div>
+          <h1>Clean paving work that makes your property look cared for.</h1>
+          <p>Asphalt Solutions LLC helps homeowners and businesses across Central Maryland with dependable paving, sealcoating, repair work, and parking lot improvements. We keep the process straightforward, professional, and easy to trust.</p>
+          <div class="hero-actions">
+            <a class="button" href="#contact">Get a Free Estimate</a>
+            <a class="button-secondary" href="#services">View Services</a>
+          </div>
+          <div class="trust-row">
+            <div class="trust-card">
+              <strong>20+</strong>
+              <span>Years serving local properties</span>
+            </div>
+            <div class="trust-card">
+              <strong>1 Day</strong>
+              <span>Typical response time to new inquiries</span>
+            </div>
+            <div class="trust-card">
+              <strong>Local</strong>
+              <span>Residential and commercial crews</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-panel">
+          <img src="https://static.wixstatic.com/media/19f5b2_a42d77708dfa4913b4b7b76477833515~mv2.jpg" alt="Freshly paved driveway in Maryland" loading="lazy">
+          <div class="hero-panel-copy">
+            <h2>What customers want from a paving company</h2>
+            <p>Clear communication, honest pricing, and work that holds up. That is the standard we build every estimate and every project around.</p>
+            <ul class="mini-list">
+              <li>Detailed on-site estimates with no pressure</li>
+              <li>Repairs, resurfacing, sealcoating, and striping</li>
+              <li>Professional cleanup and respectful crews</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="site-shell about-grid">
+        <div class="panel copy">
+          <div class="section-kicker">About Us</div>
+          <h2>Built for long-term trust, not just quick jobs.</h2>
+          <p>Asphalt Solutions LLC is a full-service asphalt paving and maintenance company serving Central Maryland. We work on residential driveways, private roads, commercial lots, and repair projects with the same goal every time: leave the customer with a surface that looks sharp and performs well.</p>
+          <p>Our team focuses on practical recommendations, dependable scheduling, and workmanship that reflects well on your home or business.</p>
+        </div>
+        <div class="panel copy">
+          <div class="section-kicker">Why Homeowners Choose Us</div>
+          <div class="feature-grid">
+            <div class="feature-item">
+              <strong>Licensed and insured</strong>
+              <span>Confidence and protection from the first site visit to the final walkthrough.</span>
+            </div>
+            <div class="feature-item">
+              <strong>Clear estimates</strong>
+              <span>We explain the scope of work so you know what is being done and why.</span>
+            </div>
+            <div class="feature-item">
+              <strong>Neat job sites</strong>
+              <span>Crews that respect your property and keep the project moving smoothly.</span>
+            </div>
+            <div class="feature-item">
+              <strong>Residential and commercial</strong>
+              <span>From small driveways to larger access roads and parking lots.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="site-shell">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Services</div>
+            <h2>Practical asphalt solutions for homes and businesses</h2>
+          </div>
+          <p class="lead">Every service is designed to improve curb appeal, protect your surface, and help you avoid more expensive repairs later.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-label">01</div>
+            <h3>Sealcoating</h3>
+            <p>Refresh the appearance of your asphalt and help protect it from water, sunlight, and everyday wear.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-label">02</div>
+            <h3>Driveway Installation</h3>
+            <p>New asphalt driveways with proper grading, smooth finishing, and a clean, finished look.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-label">03</div>
+            <h3>Repair Work</h3>
+            <p>Crack repair, pothole correction, patching, and other targeted fixes to restore safety and appearance.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-label">04</div>
+            <h3>Parking Lots and Striping</h3>
+            <p>Functional, professional-looking commercial lots with layout support and crisp line striping.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="site-shell">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Process</div>
+            <h2>A simple experience from first message to finished job</h2>
+          </div>
+        </div>
+        <div class="process-grid">
+          <article class="process-card">
+            <div class="process-step">1</div>
+            <h3>Send your details</h3>
+            <p>Tell us your name, contact information, location, and what kind of paving help you need.</p>
+          </article>
+          <article class="process-card">
+            <div class="process-step">2</div>
+            <h3>Schedule a site visit</h3>
+            <p>We review the property and recommend the right fix based on condition, use, and budget.</p>
+          </article>
+          <article class="process-card">
+            <div class="process-step">3</div>
+            <h3>Receive a clear estimate</h3>
+            <p>You get a straightforward quote with scope, timing, and no unnecessary pressure.</p>
+          </article>
+          <article class="process-card">
+            <div class="process-step">4</div>
+            <h3>Enjoy the finished result</h3>
+            <p>We complete the work professionally and leave you with a surface that looks ready and well cared for.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="site-shell">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Our Work</div>
+            <h2>Results customers can see right away</h2>
+          </div>
+        </div>
+        <div class="gallery">
+          <figure class="large">
+            <img src="https://static.wixstatic.com/media/19f5b2_a42d77708dfa4913b4b7b76477833515~mv2.jpg" alt="Residential driveway paving project" loading="lazy">
+            <figcaption>Residential driveway</figcaption>
+          </figure>
+          <figure>
+            <img src="https://static.wixstatic.com/media/19f5b2_332cee3068f746008c5f0ad0093e159a~mv2.jpg" alt="Sealcoating project" loading="lazy">
+            <figcaption>Sealcoating</figcaption>
+          </figure>
+          <figure>
+            <img src="https://static.wixstatic.com/media/19f5b2_08de958d325849609397fe8b09c43440~mv2.jpg" alt="Asphalt repair project" loading="lazy">
+            <figcaption>Repair work</figcaption>
+          </figure>
+          <figure>
+            <img src="https://static.wixstatic.com/media/19f5b2_0a1e974217774c90a1e97dbfd0317c43~mv2.jpg" alt="Parking lot paving project" loading="lazy">
+            <figcaption>Parking lots</figcaption>
+          </figure>
+          <figure>
+            <img src="https://static.wixstatic.com/media/19f5b2_982d09909b2d4103a5b92f7197249f94~mv2.jpg" alt="Parking lot striping project" loading="lazy">
+            <figcaption>Line striping</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="site-shell">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">Reviews</div>
+            <h2>What customers appreciate most</h2>
+          </div>
+        </div>
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"They showed up when they said they would, explained everything clearly, and our driveway came out better than we expected."</p>
+            <div class="reviewer">Michael T.<span>Millersville, MD</span></div>
+          </article>
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"The team handled our parking lot professionally from start to finish. The property looks cleaner and more organized now."</p>
+            <div class="reviewer">Sandra R.<span>Annapolis, MD</span></div>
+          </article>
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>"Responsive, fair, and easy to work with. We felt comfortable with the whole process and the final result looks excellent."</p>
+            <div class="reviewer">David K.<span>Glen Burnie, MD</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="site-shell contact-grid">
+        <div class="panel contact-card">
+          <div class="section-kicker">Contact</div>
+          <h2>Request your estimate</h2>
+          <p>Fill out the form and the submission will be sent to <strong>johnkristieb@gmail.com</strong> with the customer's name, email, phone number, address, service request, and project details.</p>
+          <ul class="contact-list">
+            <li>
+              <strong>Email</strong>
+              <span><a href="mailto:johnkristieb@gmail.com">johnkristieb@gmail.com</a></span>
+            </li>
+            <li>
+              <strong>Phone</strong>
+              <span>443-875-8951</span>
+            </li>
+            <li>
+              <strong>Service Area</strong>
+              <span>Millersville, Annapolis, Glen Burnie, and surrounding Central Maryland areas</span>
+            </li>
+            <li>
+              <strong>Hours</strong>
+              <span>Monday to Friday, 7:00 AM to 6:00 PM</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <form class="contact-form" id="contact-form" action="https://formsubmit.co/johnkristieb@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New Asphalt Solutions Estimate Request">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_autoresponse" value="Thank you for contacting Asphalt Solutions LLC. We received your request and will follow up with you soon.">
+            <input type="text" name="_honey" style="display:none">
+            <div class="form-grid">
+              <div class="field">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first_name" placeholder="John" required>
+              </div>
+              <div class="field">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last_name" placeholder="Smith" required>
+              </div>
+              <div class="field">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="(443) 000-0000" required>
+              </div>
+              <div class="field">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+              </div>
+              <div class="field full">
+                <label for="service">Service Needed</label>
+                <select id="service" name="service" required>
+                  <option value="">Select a service</option>
+                  <option>Sealcoating</option>
+                  <option>Driveway Installation</option>
+                  <option>Asphalt Repair Work</option>
+                  <option>Parking Lots and Striping</option>
+                  <option>Multiple Services</option>
+                  <option>Need a Recommendation</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label for="address">Project Address</label>
+                <input type="text" id="address" name="address" placeholder="123 Main St, City, MD" required>
+              </div>
+              <div class="field full">
+                <label for="message">Project Details</label>
+                <textarea id="message" name="message" placeholder="Tell us about the property, the current condition, and the kind of work you are looking for."></textarea>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="button" type="submit">Send Estimate Request</button>
+            </div>
+            <p class="form-note">Messages are submitted through the website and sent to the business email inbox. Customers do not need to open their own email app.</p>
+            <div class="success-message" id="success-message">Thanks, your request has been sent.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="site-shell footer-wrap">
+      <div class="footer-copy">
+        <h3>Asphalt Solutions LLC</h3>
+        <p>Trusted asphalt paving, repair, and maintenance for Central Maryland properties.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#work">Our Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
